@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <script src="./class/class.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./style/style backup.css"> -->
+    <title>Conversor</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+            Moneda que tenes:
+            <select id="tipoMoneda">
+                <option value="peso">ARS</option>
+                <option value="dolar">USD</option>
+                <option value="euro">EUR</option>
+            </select>
+          </div>
+          <div class="col">
+            <input type="text" placeholder="Cantidad de monedas" id="cantidad">
+        </div>
+        <div class="col">
+              moneda que queres:
+            <select id="monedaObjetivo">
+                <option value="peso">ARS</option>
+                <option value="dolar">USD</option>
+                <option value="euro">EUR</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="resultado"></div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" style="margin: 2rem auto;">
+                <button onclick="empezarCotizacion()">
+                    toque para convertir
+                </button>
+                
+                    <a href="./index.html" class="link-danger" onclick="borrarStorage()">finalizar</a>
+            </div>
+            <div class="col"></div>
+          </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

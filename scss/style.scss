@@ -1,0 +1,33 @@
+@import './base/conversor';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap');
+
+.calcular{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+}
+
+iframe{
+    margin: 20px;
+}
+
+footer{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,0.804359243697479) 0%, rgba(97,221,238,0.8407738095238095) 83%, rgba(0,212,255,1) 100%);
+    nav{
+        color: black;
+        text-align: right;
+        ul{
+            li{
+                address{
+                    p{
+                        font-family: 'Raleway', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}

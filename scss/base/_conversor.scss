@@ -1,0 +1,34 @@
+$back-gradient: linear-gradient(90deg, rgba(2,0,36,0.804359243697479) 0%, rgba(97,221,238,0.8407738095238095) 83%, rgba(0,212,255,1) 100%);
+$display: flex;
+$justify: center;
+
+.container {
+    background: $back-gradient;
+    color: black;
+    p {
+        color: white;
+        background: $back-gradient;
+        margin-bottom: 0px;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    .row{
+        .col{
+            button{
+                display: $display;
+                justify-content: $justify;
+                font-size: 20px;
+                width: 400px;
+                background-color: green;
+            }
+            a{
+                display: $display;
+                justify-content: $justify;
+                background-color: rgba(255, 255, 255, 0.37);
+                font-size: 20px;
+                width: 400px;
+                text-decoration: none;
+            }
+        }
+    }
+}
