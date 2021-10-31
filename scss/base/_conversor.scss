@@ -2,7 +2,7 @@ $back-gradient: linear-gradient(90deg, rgba(2,0,36,0.804359243697479) 0%, rgba(9
 $display: flex;
 $justify: center;
 
-.container {
+.contenedor {
     background: $back-gradient;
     color: black;
     p {
@@ -13,12 +13,14 @@ $justify: center;
         text-align: center;
     }
     .row{
+        text-align: center;
         .col{
+            text-align: center;
             button{
                 display: $display;
                 justify-content: $justify;
                 font-size: 20px;
-                width: 400px;
+                width: 25rem;
                 background-color: green;
             }
             a{

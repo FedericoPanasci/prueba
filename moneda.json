@@ -1,0 +1,14 @@
+[
+        {
+            "nombre": "peso",
+            "valor": 1
+        },
+        {
+            "nombre": "dolar", 
+            "valor": 192
+        },
+        {
+            "nombre": "euro", 
+            "valor": 200
+        }
+]

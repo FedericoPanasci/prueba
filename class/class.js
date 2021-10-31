@@ -8,17 +8,17 @@ class Moneda {
         ];
     }
 
-    
-    solicitarDatos(){
+        
+    solicitarDatos(from, ammount, target){
         //Manejo de DOM
         const moneda = {
-            nombre: document.getElementById("tipoMoneda").value,
-            cantidad: document.getElementById("cantidad").value,
+            nombre: from,
+            cantidad: ammount,
         };
-        const objetivo = document.getElementById("monedaObjetivo").value;
+        const objetivo = target;
         // ******************************** /
 
-        this.convertirMonedas(moneda, objetivo);  
+        this.convertirMonedas(moneda, objetivo);
     }
 
     convertirMonedas(moneda, objetivo) {
@@ -45,10 +45,17 @@ class Moneda {
     }
     
     imprimirDocumento(resultado, cant, monedaFrom, monedaTarget){
+        //------------------------------- con javaScript nativo
         let acumulador = document.getElementById("resultado").innerHTML;
         acumulador += `<p>resultado = ${resultado} - convertido de ${monedaFrom.nombre} a ${monedaTarget.nombre} - cantidad de conversiones realizadas: ${cant}</p>`;
-        document.getElementById("resultado").innerHTML = acumulador;
-        
+        //--------------------------------------- con jquery
+        let texto = `<p>resultado = ${resultado} - convertido de ${monedaFrom.nombre} a ${monedaTarget.nombre} - cantidad de conversiones realizadas: ${cant}</p>`;
+        //document.getElementById("resultado").innerHTML = acumulador;
+
+        //------------ utilizacion de jquery html
+        //$("#resultado").html(acumulador);
+        //-------------apend
+        $("#resultado").append(texto);
     }
 }
 

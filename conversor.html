@@ -6,56 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script src="./class/class.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="./style/style backup.css"> -->
-    <title>Conversor</title>
+    
+    <script src="./class/class.js"></script>
+    <title>desafio api</title>
 </head>
 <body>
+    <div class="row" style="width: 80%; margin: 25px auto 10px auto;">
+        <h2 id="tituloConversor">Si ya tiene cuenta ingrese sus datos y clickee "enviar", de lo contrario ingrese sus datos y clickee "Crear Cuenta"</h2>
 
-    <div class="container">
-        <div class="row">
-            <div class="col">
-            Moneda que tenes:
-            <select id="tipoMoneda">
-                <option value="peso">ARS</option>
-                <option value="dolar">USD</option>
-                <option value="euro">EUR</option>
-            </select>
-          </div>
-          <div class="col">
-            <input type="text" placeholder="Cantidad de monedas" id="cantidad">
-        </div>
-        <div class="col">
-              moneda que queres:
-            <select id="monedaObjetivo">
-                <option value="peso">ARS</option>
-                <option value="dolar">USD</option>
-                <option value="euro">EUR</option>
-            </select>
-          </div>
-        </div>
-      </div>
+        <a href="index.html" onclick="borrarStorage()" style="text-align: center; text-decoration: none;">Volver al inicio</a>
+        <input type="text" placeholder="cuenta" id="cuenta" style="text-align: center; width: 50%; margin: 0 auto;">
+        <input type="text" placeholder="contraseña" id="contrasenia" style="text-align: center; width: 50%; margin: 0 auto;">
+        <button onclick="generarLogin()" id="boton" style="display: none;">Enviar</button>
+        <button onclick="crearCuenta()" id="crear" style="display: none;">Crear cuenta</button>
     </div>
 
-    <div class="container" id="resultado"></div>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col" style="margin: 2rem auto;">
-                <button onclick="empezarCotizacion()">
-                    toque para convertir
-                </button>
-                
-                    <a href="./index.html" class="link-danger" onclick="borrarStorage()">finalizar</a>
-            </div>
-            <div class="col"></div>
-          </div>
-
-    </div>
-
+    <div id="documento" style="width: 80%; margin: 0px auto 0 auto;"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>

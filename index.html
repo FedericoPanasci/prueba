@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!--meta tags agregados -->
+  
   <meta name="description"
     content="Somos el banco de america del sur que mantiene las mejores cotizaciones de cambio entre monedas gracias a su contacto estrecho con los clientes.">
   <meta name="keywords"
@@ -16,6 +15,7 @@
     <meta property="og:description" content="Somos el banco de america del sur que mantiene las mejores cotizaciones de cambio entre monedas gracias a su contacto estrecho con los clientes.">
     <meta property="og:image" content="images/logo.png">
 
+  
   <script src="./class/class.js"></script>
 
   <!--bootstrap-->
@@ -23,31 +23,40 @@
     integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
 
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="style/style backup.css">
   <title>Banco del Sur | el banco que esta a tu lado</title>
 </head>
 
 <body>
-  <header>
-    <img src="images/logo.png" alt="Banco">
+  <!-- NAV con las referencias a los otros html-->
+  <header class="container">
+    <img src="images/logo.png" alt="Banco del Sur" class="img-h">
 
-    <h1>Banco Del Sur</h1>
+    <h1 id="banco" class="text-center">Banco Del Sur</h1>
 
-    <div id="header">
-      <ul class="nav">
-        <li><a class="paginaActual" href="">Inicio</a></li>
-        <li><a href="">Menu</a>
-          <ul>
-            <li><a href="#imagen-principal">seccion principal</a></li>
-            <li><a href="#imagen-secundarias">demostración</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Menú</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#imagen-secundarias">información</a></li>
+          <li><a class="dropdown-item" href="#calcular">conversor</a></li>
+        </ul>
+      </li>
+    </ul>
+
   </header>
 
 
   <!----------------------------------------------------->
+
+  <div class="images-being">
+    <img src="images/principal.jpg" class="w-100 h-100" alt="Banco del sur esta con vos en todos lados con nuestra app" loading="lazy">
+    <img src="images/segunda.jpg" class="w-100 h-100" alt="Banco del sur te ayuda con tus conversiones de moneda cuando las necesites, tambien con otros tramites que puedas realizar por la aplicacion como transferencias, pagos y mas" loading="lazy">
+    <img src="images/tercera.jpg" class="w-100 h-100" alt="Banco del Sur esta junto a nuestros clientes, en epoca de pandemia realizamos todos los cambios digitales necesarios para cuidar la salud de todos" loading="lazy">
+  </div>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -81,51 +90,71 @@
   </div>
   <!----------------------------------------------------->
 
-  <section id="imagen-secundarias">
-    <section class="item-1">
-      <img src="./images/conversor.png" alt="Convertidor de monedas" class="opacity item" width="100em" loading="lazy">
-      <p>Consulte las cotizaciones de todo el mundo</p>
+  <section id="imagen-secundarias" class="grid-container">
+    <section class="item-1 grid-item">
+      <h2>Cotizaciones de <br> el mundo</h2>
+      <img src="./images/conversor.png" alt="Convertidor de monedas" class="item" width="100em" loading="lazy">
+      <h6>Acá podés ver la cotización del billete por unidad en el Mercado libre de Cambios, ámbito de aplicación y vigencia para operaciones por Banca Online al momento de la consulta</h6>
     </section>
 
-    <section class="item-2">
-      <img src="./images/login.png" alt="Mi Cuenta" class="opacity item" width="100em" loading="lazy">
-      <p>Mi Cuenta</p>
+    <section class="item-2 grid-item">
+      <h2>Mi cuenta</h2>
+      <img src="./images/login.png" alt="Mi Cuenta" class="item" width="100em" loading="lazy">
+      <h6>Acá podes acceder a tu cuenta de HomeBanking y realizar desde cualquier lugar donde estes todas las acciones que quieras o tener el control total de tu dinero y la configuracion de cuenta</h6>
     </section>
 
-    <section class="item-3">
-      <img src="./images/prestamos.png" alt="Prestamos" class="opacity item" width="100em" loading="lazy">
-      <p>Necesito un prestamo</p>
+    <section class="item-3 grid-item">
+      <h2>Necesito un prestamo</h2>
+      <img src="./images/prestamos.png" alt="Prestamos" class="item" width="100em" loading="lazy">
+      <h6>Acá vas a poder obtener toda la informacion que necesites para obtener un prestamo, tambien podes ser el prestador y disfrutar de sus beneficios</h6>
     </section>
 
   </section>
 
-  <section class="calcular">
-    <p style="display: inline;">Asi calculamos la cotizacion de la moneda</p>
+<!----------------------------------------------------------->
+  <div class="contenedor-solicitud">
+    <h2 class="titulo-solicitud">Solicitá un turno</h2>
+    <h6 class="explicacion-solicitud">En caso de ser necesario, para poder acercarte a una sucursal se solicita un turno a fin de evitar la aglomeración de personas</h6>
+    <div class="botones-solicitud">
+      <button class="btn" id="btn-turno">Sacar turno</button>
+      <button class="btn" id="btn-ayuda">Necesito ayuda</button>
+    </div>
+  </div>
 
+<!----------------------------------------------------------->
+
+  <section id="calcular" class="calcular">
+  <h3>¿Desea conocer alguna cotización?</h3>
+  <p>Ahora puede calcular la cantidad equivalente entre pesos, dolares y euros en nuestro mercado.</p>
+  <P><strong>NOSOTROS LE AYUDAMOS</strong> haga click en el siguiente botón.</p>
     <a href="conversor.html" rel="noopener noreferrer">
       <button><h2>Quiero calcular</h2></button>
     </a>
 
-    <iframe width="720" height="480" src="https://www.youtube.com/embed/uGQwezayCm0" title="YouTube video player"
-      frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    <iframe id="demostracion" width="720" height="480" src="https://www.youtube.com/embed/uGQwezayCm0"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen alt="Video realizado para que los clientes de banco del sur comprendan como realizamos su cotizacion" loading="lazy"></iframe>
+    
+    <p class="texto-video">Nuestra aplicación le facilitará conocer las equivalencias en monto y cantidad de divisas que usted necesite.</p>
   </section>
 
   <footer>
     <nav>
       <ul>
-        <li>Home</li>
+        <li><a href="#">Home</a>
+        </li>
         <li>
           <address>
-            <p>Contact: <span><strong>Federico-@mail.com</strong></span></p>
+            <p>Contact: <span><strong>fpanasci@interbanking.com.ar</strong></span></p>
           </address>
         </li>
-        <li>Help Me</li>
+        <li>
+          proximamente en redes 
+        </li>
       </ul>
     </nav>
   </footer>
-
-
   <!--boostrap-->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
     integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
